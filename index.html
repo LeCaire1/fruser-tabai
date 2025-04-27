@@ -2,16 +2,18 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Répertoire d'Utilisateurs</title>
+    <title>Tabai User Base</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Répertoire d'Utilisateurs</h1>
+        <div class="header">
+            <h1>S'inscrire</h1>
+            <button onclick="ajouterUtilisateur()">Ajouter</button>
+        </div>
 
         <div class="form">
             <input type="text" id="username" placeholder="Nom d'utilisateur">
-            <button onclick="ajouterUtilisateur()">Ajouter</button>
         </div>
 
         <ul id="userList"></ul>
