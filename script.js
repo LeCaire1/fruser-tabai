@@ -11,6 +11,11 @@ function ajouterUtilisateur() {
     }
 }
 
+function supprimerUtilisateur(index) {
+    userList.splice(index, 1);
+    afficherUtilisateurs();
+}
+
 function afficherUtilisateurs() {
     const listElement = document.getElementById('userList');
     listElement.innerHTML = '';
@@ -18,6 +23,7 @@ function afficherUtilisateurs() {
     userList.forEach((user, index) => {
         const li = document.createElement('li');
         li.textContent = user;
+        li.onclick = () => supprimerUtilisateur(index);
         listElement.appendChild(li);
     });
 }
